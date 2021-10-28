@@ -10,7 +10,7 @@
   </ul>
 
   <p v-if="loading">
-   Still loading..
+   
   </p>
   <p v-if="error">
 
@@ -47,8 +47,7 @@ export default {
 
 function fetchData() {
   loading.value = true;
-  // I prefer to use fetch
-  // you can use use axios as an alternative
+ 
   return fetch('http://jsonplaceholder.typicode.com/posts', {
     method: 'get',
     headers: {
