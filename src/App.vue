@@ -1,15 +1,18 @@
 <template> 
-    <div>
-         <form action="#" method="post">  
+<div id="app">
+  <Posts />
+  </div>
+    <!-- <div>
+    <form method="post">  
     
     <div>
-      <label for="day">Day:</label>
-      <input placeholder="кол-во дней" type="text" id="day" name="user_day">  
+    <label for="day">Day:</label>
+    <input placeholder="кол-во дней" type="text" id="day" name="user_day">  
     </div>  
 
     <div>
-      <label for="location">Location:</label>
-      <input placeholder="город на английском" type="location" id="location" name="user_location">  
+    <label for="location">Location:</label>
+    <input placeholder="город на английском" type="location" id="location" name="user_location">  
     </div> 
 
     <div>
@@ -18,11 +21,18 @@
 
 </form>
     </div>
-    <!--<button @click="addLike">Like</button> IF v-on:click='addLike'-->
+    <button @click="addLike">Like</button> IF v-on:click='addLike' -->
 </template>
 
 
 <script>
+import Posts from './components/Posts.vue'
+export default {
+  name: 'App',
+  components: {
+    Posts
+  }
+}
 const API_TOKEN = 'YmVmYjliYmQtN2U0MC00MzkyLTgwNjUtYTA1ZTRkMzAwZTc0';
 const API_URL = 'https://api.m3o.com/v1/weather/Forecast';
 
